@@ -1,0 +1,8 @@
+com\atos\techstudio\model\User.class
+com\atos\techstudio\service\LoginService.class
+com\atos\techstudio\service\LoginServiceImpl.class
+com\atos\techstudio\controller\IndexController.class
+com\atos\techstudio\dao\LoginDao.class
+com\atos\techstudio\controller\LoginController.class
+com\atos\techstudio\dao\LoginDaoImpl.class
+com\atos\techstudio\model\Login.class
