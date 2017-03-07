@@ -1,6 +1,7 @@
 <div class="col-xs-offset-2 col-xs-8" ng-controller="LoginController">
 	<div ng-show="error" class="alert alert-danger">{{error}}</div>
 	<form name="form" ng-submit="login()" role="form">
+		<h3>Login</h3>
 	    <div class="form-group">
 	        <label for="username">Username</label>
 	        <i class="fa fa-key"></i>

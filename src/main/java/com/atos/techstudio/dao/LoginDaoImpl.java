@@ -1,14 +1,10 @@
 package com.atos.techstudio.dao;
 
-import java.util.List;
-
-import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.atos.techstudio.model.Login;
-import com.atos.techstudio.model.User;
 
 @Repository("loginDao")
 public class LoginDaoImpl implements LoginDao {
@@ -18,7 +14,7 @@ public class LoginDaoImpl implements LoginDao {
 	
 	@Override
 	public boolean validateUser(Login login) {
-		try {
+		/*try {
 			String str = "from User where username = :username and password = :password";
 			Query query = sessionFactory.getCurrentSession().createQuery(str);
 			query.setString("username", login.getUsername());
@@ -32,6 +28,9 @@ public class LoginDaoImpl implements LoginDao {
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 			e.printStackTrace();
+		}*/
+		if(login.getUsername().equals(login.getPassword())) {
+			return true;
 		}
 		return false;
 	}

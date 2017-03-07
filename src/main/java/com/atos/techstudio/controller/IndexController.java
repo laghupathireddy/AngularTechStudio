@@ -23,19 +23,24 @@ public class IndexController {
 		  System.out.println("index controller for home");
 	        return "home";
 	    }
-	  @RequestMapping(value = "/blog", method = RequestMethod.GET)
+	 /* @RequestMapping(value = "/blog", method = RequestMethod.GET)
 	    public String getBlogPage() {
 		  System.out.println("index controller for blog");
 	        return "blog";
-	    }
-	  @RequestMapping(value = "/enquiry", method = RequestMethod.GET)
+	    }*/
+	  /*@RequestMapping(value = "/enquiry", method = RequestMethod.GET)
 	    public String getEnquiryPage() {
 		  System.out.println("index controller for enquiry");
 	        return "enquiry";
-	    }
-	  @RequestMapping(value = "/notice", method = RequestMethod.GET)
+	    }*/
+	  /*@RequestMapping(value = "/notice", method = RequestMethod.GET)
 	    public String getNoticePage() {
 		  System.out.println("index controller for notice");
 	        return "notice";
+	    }*/
+	  @RequestMapping(value = "/info", method = RequestMethod.GET)
+	    public String getInfoPage() {
+		  System.out.println("index controller for info");
+	        return "info";
 	    }
 }

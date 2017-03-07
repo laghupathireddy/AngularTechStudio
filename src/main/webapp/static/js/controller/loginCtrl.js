@@ -1,23 +1,14 @@
 'use strict';
  
-loginApp.controller('LoginController', ['$scope', '$window', 'LoginService', function ($scope, $window, LoginService) {
+loginApp.controller('LoginController', ['$scope', '$window', 'LoginService', '$cookieStore', function ($scope, $window, LoginService, $cookieStore) {
  
-        $scope.login1 = function () {
-        	console.log('login method called  -- user 11--- ' + $scope.username);
-        	var data = LoginService.validateUser($scope.username, $scope.password);
-        	console.log('data in controller --- ' + data);
-        	if(data) {
-        		$location.path('/home');        		
-        	}
-        	$scope.error = 'Invalid Username or Password';
-        }
-        
         $scope.login = function () {
-        	console.log('login method called  -- user 22 --- ' + $scope.username);
+        	$cookieStore.remove('blogAccessed');
+        	$cookieStore.remove('noticeAccessed');
+        	console.log('login method called  -- user --- ' + $scope.username);
         	var promise = LoginService.validateUser($scope.username, $scope.password);
         	promise.then(
         		function(data) {
-        			console.log('data -- 22 --' + data);
         			if(data) {
         				//$location.path('/home');
         				//$location.url('/home');
